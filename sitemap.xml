@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Home Page -->
+    <url>
+        <loc>https://www.yourdomain.com/index.html</loc>
+        <lastmod>2024-11-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Trends Page -->
+    <url>
+        <loc>https://www.yourdomain.com/trends.html</loc>
+        <lastmod>2024-11-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Lookbook Page -->
+    <url>
+        <loc>https://www.yourdomain.com/lookbook.html</loc>
+        <lastmod>2024-11-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Contact Page -->
+    <url>
+        <loc>https://www.yourdomain.com/contact.html</loc>
+        <lastmod>2024-11-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Social Media Links (you may want to include these as well for SEO purposes) -->
+    <url>
+        <loc>https://www.instagram.com/meghasimon_</loc>
+        <lastmod>2024-11-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>mailto:meghasimon7@gmail.com</loc>
+        <lastmod>2024-11-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://www.pinterest.com/meghasimon_</loc>
+        <lastmod>2024-11-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+</urlset>

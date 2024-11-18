@@ -1,0 +1,634 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f0f0f0; /* Light grey background */
+}
+
+
+/* Header Styling */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 70px;
+    width: auto;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* Social Icons Styling */
+.social-icons {
+    position: fixed;                /* Fixed position so icons stay at the top */
+    top: 20px;                      /* Adjust from top */
+    right: 20px;                    /* Adjust from right */
+    display: flex;                  /* Flexbox to align items horizontally */
+    gap: 15px;                      /* Space between icons */
+    z-index: 9999;                  /* Ensure they are above other content */
+}
+
+.social-icons a {
+    color: #333;                    /* Default icon color */
+    font-size: 22px;                 /* Icon size */
+    text-decoration: none;          /* Remove underlines */
+    transition: color 0.3s ease;    /* Smooth hover effect */
+}
+
+.social-icons a:hover {
+    color: #555;                    /* Darker color on hover */
+}
+
+.social-icons i {
+    font-size: 22px;                 /* Icon size */
+}
+
+.social-icons a:hover i {
+    color: #888;                    /* Icon color on hover */
+}
+
+
+/* Menu Bar Styling */
+.menu-bar ul {
+    list-style: none;
+    margin: 0;
+    margin-top: -30px;   
+    padding: 0; 
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu-bar {
+    border-bottom: none; /* This removes the line */
+}
+
+.menu-bar ul li {
+    display: inline;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: color 0.3s;
+    padding: 10px 0;
+    line-height: 1.5;
+}
+
+.menu-bar ul li a:hover {
+    color: grey;
+}
+
+/* Hero Section with Background Image */
+.hero {
+    position: relative;                                /* Position relative for overlay */
+    background-image: url('images/background-image.jpg'); /* Your background image */
+    background-size: cover;                             /* Make the image cover the entire area */
+    background-position: center;                        /* Center the image */
+    padding: 150px 20px 20px;                            /* Adjust the top padding to move the text down */
+    text-align: center;
+}
+
+/* Add overlay for transparency effect */
+.hero::before {
+    content: '';                                        /* No content, just the overlay */
+    position: absolute;                                 /* Position it absolutely */
+    top: 0;                                             /* Start from the top of the container */
+    left: 0;                                            /* Align to the left of the container */
+    right: 0;                                           /* Stretch to the right */
+    bottom: 0;                                          /* Stretch to the bottom */
+    background-color: rgba(0, 0, 0, 0.4);              /* Black with 40% opacity for overlay */
+    z-index: 1;                                         /* Ensure overlay is on top of the background image */
+}
+
+/* Title Styling (h1) */
+.hero h1 {
+    font-size: 60px;                                    /* Increase the font size */
+    margin: 0;                                          /* Remove default margin */
+    margin-top: -50px;
+    font-weight: bold;                                  /* Make the title bold */
+    color: white;                                       /* Change the title color to white for contrast */
+    position: relative;                                 /* Ensure the title is above the overlay */
+    z-index: 2;                                        /* Ensure the title is above the overlay */
+top: -20px;           /* Move the title 20px upwards */
+}
+
+/* Description Styling (p) */
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: white;                                       /* Keep the description text white */
+    position: relative;                                 /* Ensure description is above the overlay */
+    z-index: 2;                                         /* Ensure the description is above the overlay */
+}
+
+/* Top Stories Section */
+/* Top Stories Section */
+.top-stories {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+
+/* Story Cards */
+.story-card {
+    display: inline-block;
+    width: 30%;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Remove extra margin on the last card */
+.story-card:last-child {
+    margin-right: 0;
+}
+
+/* Image styling */
+.story-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+/* Title Styling */
+.story-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+/* Description Styling */
+.story-card p {
+    font-size: 16px;
+    color: #777;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+/* Hover Effects */
+.story-card:hover {
+    transform: translateY(-5px); /* Slight lift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Image opacity */
+.story-card:hover img {
+    opacity: 0.8;
+}
+
+
+
+/* Styling for the Top Stories Title */
+.top-stories h2 {
+    font-family: 'Arial', sans-serif; /* Use same font family */
+    font-weight: 100; /* Thin font weight */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 3px; /* Space between letters */
+    color: #555; /* Dark grey color */
+    text-align: center; /* Center the title */
+    font-size: 26px; /* Adjust font size */
+    margin-top: 10px; /* Space from the top */
+    padding: 20px; /* Space around the title */
+}
+
+/* Styling for Story Titles */
+.story-content h3 {
+    font-size: 10px;          /* Adjust the size of story titles */
+    font-weight: 600;         /* Thin font weight */
+    letter-spacing: 1px;    /* Add letter spacing */
+    margin-top: 10px;         /* Add some space above story titles */
+    margin-bottom: 10px;      /* Add space below story titles */
+font-family: 'Arial', serif; /* Change font to Arial */
+}
+
+
+/* Styling for Story Descriptions */
+.story-content p {
+    font-size: 16px;          /* Adjust size for story descriptions */
+    font-weight: 300;         /* Thin font weight */
+    line-height: 1.6;         /* Improve readability with line height */
+}
+.top-stories {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;                /* Use flexbox for horizontal alignment */
+    justify-content: space-between; /* Space out the stories */
+    flex-wrap: wrap;              /* Allow wrapping for smaller screens */
+}
+
+.top-stories h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    width: 100%;                  /* Ensures heading takes full width */
+    text-align: center;
+}
+
+/* Styling each story to be side-by-side */
+.story {
+    width: 30%;                   /* Each story takes up 30% of the container */
+    text-align: center;
+    margin-bottom: 20px;          /* Space between rows when wrapping */
+}
+
+.story img {
+    width: 400px;       /* Set a fixed width for the image */
+    height: 450px;      /* Set the height equal to the width to make it square */
+    object-fit: cover;  /* Ensure the image content fits well inside the square */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for aesthetics */
+}
+
+
+.story-content {
+    padding: 10px 0;
+}
+
+.story-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.story-content p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Styling for Trends Section */
+.trends {
+    margin: 50px auto;         /* Center the section */
+    text-align: center;        /* Center-align section title */
+    max-width: 1200px;         /* Limit the width of the section */
+    padding: 20px;
+    background-color: #ffffff; /* Optional: Add a white background */
+    border-radius: 10px;       /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Trends Section Title */
+.trends h2 {
+    font-size: 26px;
+    font-weight: 300;          /* Bold title */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #333333;  /* Dark grey color */
+    margin-bottom: 20px;
+}
+
+/* Trends Section */
+.trend-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.trend-item {
+    width: 30%;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Image Hover Effect */
+.trend-item img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.trend-item img:hover {
+    transform: scale(1); /* Slightly enlarge the image */
+    opacity: 0.8; /* Make the image slightly transparent */
+}
+
+
+.trend-item h3 {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Modal Overlay */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Show Modal When Targeted */
+.modal:target {
+    display: block;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: left;
+    position: relative;
+}
+
+/* Close Button */
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.modal-content .close:hover {
+    color: grey;
+}
+
+/* Trend Content */
+.trend-content {
+    padding: 15px;
+}
+
+.trend-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;               /* Dark grey for titles */
+}
+
+.trend-content p {
+    font-size: 16px;
+    color: #666;               /* Medium grey for descriptions */
+    line-height: 1.5;
+}
+
+/* Lookbook Section */
+.lookbook {
+    padding: 40px;
+    background-color: #f8f8f8;
+}
+
+/* Lookbook Title Styling */
+.lookbook h2 {
+    font-family: 'Arial', sans-serif; /* Use same font family */
+    font-weight: 100; /* Thin font weight */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 2px; /* Space between letters */
+    color: #555; /* Dark grey color */
+    text-align: center; /* Center the title */
+    font-size: 30px; /* Adjust font size */
+    margin-top: 10px; /* Space from the top */
+    padding: 20px; /* Space around the title */
+}
+
+.look-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-evenly;
+}
+
+.look-item {
+    width: 30%;
+    text-align: center;
+}
+
+.look-item img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.look-item img:hover {
+    transform: scale(1.05);
+}
+
+.look-item h3 {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* Modal Styles */
+.modal-toggle {
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    width: 70%;
+    max-width: 800px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #333;
+    text-decoration: none;
+}
+
+.modal .close:hover {
+    color: #007bff;
+}
+
+/* Show Modal when Checkbox is Checked */
+.modal-toggle:checked + .modal {
+    display: flex;
+}
+
+
+/* General Styling for Full-Page Layout */
+body {
+    display: flex;
+    flex-direction: column; /* Arrange header, content, and footer in a column */
+    min-height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove default margin */
+}
+
+/* Contact Form Section */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: linear-gradient(to right, #ece9e6, #ffffff), 
+                url('images/contact-bg.jpg') no-repeat center center/cover;
+    padding: 20px;
+    flex: 1; /* This ensures the footer is pushed down to the bottom */
+}
+
+/* Full-Screen Video Background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place behind the content */
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire screen */
+}
+
+/* Contact Overlay */
+.contact-overlay {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white;
+    text-align: center;
+}
+
+/* Contact Form Box Styling */
+.contact-box {
+    width: 400px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative; /* To stay above the overlay */
+    z-index: 2; /* Place content above the overlay */
+
+/* Center the box */
+    position: absolute;
+    top: 55%; /* 55% from the top */
+    left: 50%; /* 50% from the left */
+    transform: translate(-50%, -50%); /* Center offset */
+}
+}
+
+/* Contact form box header */
+.contact-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Dark grey font color */
+}
+
+.contact-box label {
+    display: block; /* Make labels stack vertically */
+    text-align: left; /* Align text to the left */
+    margin-bottom: 8px; /* Space below the label */
+    font-weight: bold; /* Bold labels */
+    color: #555; /* Slightly lighter grey */
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the input */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+    font-family: Arial, sans-serif; /* Consistent font */
+    box-sizing: border-box; /* Prevent overflow issues */
+}
+
+.contact-box button {
+    width: 100%; /* Full-width button */
+    padding: 10px; /* Inner padding */
+    background-color: #333; /* Dark grey button */
+    color: #fff; /* White text */
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth hover transition */
+}
+
+.contact-box button:hover {
+    background-color: #555; /* Lighter grey on hover */
+}
+
+/* Social Media Links Styling */
+.social-links {
+    margin-top: 20px; /* Space above the icons */
+}
+
+.social-links a {
+    margin: 0 10px; /* Space between icons */
+    display: inline-block;
+}
+
+.social-links img {
+    width: 30px; /* Adjust size of icons */
+    height: 30px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+    opacity: 0.8; /* Reduce opacity on hover */
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+}
